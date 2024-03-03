@@ -1,0 +1,8 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  overflow: hidden;
+  background-color: var(--color-white);
+
+}
