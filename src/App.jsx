@@ -8,12 +8,10 @@ export const App = () => {
     bad: 0,
   };
 
-  const [feedbackCount, setFeedbackCount] = useState(initialFeedbackCount);
-
-  useEffect(() => {
+  const [feedbackCount, setFeedbackCount] = useState(() => {
     const storedFeedback = JSON.parse(localStorage.getItem('feedback'));
-    storedFeedback && setFeedbackCount(storedFeedback);
-  }, []);
+    return storedFeedback || initialFeedbackCount;
+  });
 
   useEffect(() => {
     localStorage.setItem('feedback', JSON.stringify(feedbackCount));
