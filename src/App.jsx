@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Feedback, Options, Notification } from 'components';
+import { Feedback, Options, Notification, Description } from 'components';
 
 export const App = () => {
   const initialFeedbackCount = {
@@ -36,11 +36,7 @@ export const App = () => {
 
   return (
     <div>
-      <h1>Sip Happens Café</h1>
-      <p>
-        Please leave your feedback about our service by selecting one of the
-        options below.
-      </p>
+      <Description />
       <Options
         updateFeedback={updateFeedback}
         resetFeedback={resetFeedback}
